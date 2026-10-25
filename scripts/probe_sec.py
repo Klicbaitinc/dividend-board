@@ -1,50 +1,53 @@
 #!/usr/bin/env python3
-"""Print HTTP status for free SEC hosts. Used to see what GitHub runners can reach.
+"""Check SEC hosts one at a time from a GitHub runner.
 
-Does not invent a contact email. Uses SEC_USER_AGENT or the project-URL default.
+Declared User-Agents only. No invented email address.
+The daily index is requested first, before efts.sec.gov, so a block on
+full-text search cannot poison the other results.
 """
 import os
 import sys
+import time
 
 import requests
 
-UA = os.environ.get("SEC_USER_AGENT", "").strip() or "DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)"
-URLS = [
-    "https://efts.sec.gov/LATEST/search-index?q=%22quarterly%20dividend%22&forms=8-K&dateRange=custom&startdt=2026-10-20&enddt=2026-10-23",
-    "https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/master.20261023.idx",
-    "https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/form.20261023.idx",
-    "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K&count=10&output=atom",
-    "https://data.sec.gov/submissions/CIK0000320193.json",
-    "https://www.sec.gov/files/company_tickers.json",
-    "https://www.sec.gov/Archives/edgar/data/1163668/000114036126040519/0001140361-26-040519-index.json",
-    "https://www.sec.gov/Archives/edgar/data/1163668/000114036126040519/ef20084210_ex99-3.htm",
-    "https://www.sec.gov/Archives/edgar/data/1163668/000114036126040519/0001140361-26-040519.txt",
+DEFAULT_UA = "DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)"
+ALT_UA = "Klicbaitinc DividendRaiseCutBoard https://github.com/Klicbaitinc/dividend-board"
+PRIMARY = os.environ.get("SEC_USER_AGENT", "").strip() or DEFAULT_UA
+
+CHECKS = [
+    (PRIMARY, "https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/master.20261023.idx"),
+    (PRIMARY, "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K&count=10&output=atom"),
+    (PRIMARY, "https://data.sec.gov/submissions/CIK0000320193.json"),
+    (PRIMARY, "https://www.sec.gov/Archives/edgar/data/1163668/000114036126040519/ef20084210_ex99-3.htm"),
+    (ALT_UA, "https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/master.20261023.idx"),
+    (PRIMARY, "https://efts.sec.gov/LATEST/search-index?q=%22quarterly%20dividend%22&forms=8-K&dateRange=custom&startdt=2026-10-20&enddt=2026-10-23"),
 ]
 
+def summarize(resp):
+    body = resp.text or ""
+    title = ""
+    low = body.lower()
+    if "<title>" in low:
+        i = low.find("<title>")
+        title = body[i + 7:i + 160].split("<")[0].strip()
+    extra = ""
+    if resp.status_code == 200 and "master." in resp.url and ".idx" in resp.url:
+        extra = f" 8-K={sum(1 for line in body.splitlines() if '|8-K|' in line or '|8-K/A|' in line)}"
+    head = title or body[:120].replace("\n", " ")
+    return f"{resp.status_code} {(resp.headers.get('content-type') or '').split(';')[0]} bytes={len(resp.content)}{extra} | {head}"
+
 def main():
-    print(f"User-Agent: {UA}", flush=True)
-    s = requests.Session()
-    s.headers.update({"User-Agent": UA, "Accept-Encoding": "gzip, deflate"})
-    for url in URLS:
+    for i, (ua, url) in enumerate(CHECKS):
+        if i:
+            time.sleep(3)
+        print(f"UA: {ua}", flush=True)
+        print(f"GET {url}", flush=True)
         try:
-            r = s.get(url, timeout=45)
-            body = r.text or ""
-            title = ""
-            if "<title>" in body.lower():
-                i = body.lower().find("<title>")
-                title = body[i + 7:i + 120].split("<")[0].strip()
-            kind = (r.headers.get("content-type") or "").split(";")[0]
-            extra = ""
-            if r.status_code == 200 and url.endswith(".idx"):
-                extra = f" lines={body.count(chr(10))} 8-K={sum(1 for line in body.splitlines() if '|8-K|' in line or '|8-K/A|' in line)}"
-            print(f"{r.status_code} {kind} bytes={len(r.content)}{extra} {url}", flush=True)
-            if title:
-                print(f"  title: {title}", flush=True)
-            elif r.status_code == 200:
-                print(f"  head: {body[:160].replace(chr(10), ' ')}", flush=True)
+            r = requests.get(url, headers={"User-Agent": ua, "Accept-Encoding": "gzip, deflate"}, timeout=45)
+            print(summarize(r), flush=True)
         except Exception as ex:
-            print(f"ERR {type(ex).__name__}: {ex} {url}", flush=True)
-            return 1
+            print(f"ERR {type(ex).__name__}: {ex}", flush=True)
     return 0
 
 if __name__ == "__main__":
