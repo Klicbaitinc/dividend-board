@@ -11,7 +11,7 @@ If amounts cannot be parsed they are left null.
 
 Usage:  python scripts/fetch_dividends.py [--days 60]
 Env:    SEC_USER_AGENT  descriptive contact string required by SEC fair-access rules.
-        Falls back to the project URL when unset. Set the repo variable to add an email.
+        Falls back to the project name plus the approved contact email when unset.
 """
 import argparse, datetime as dt, hashlib, html, json, os, re, sys, time
 from pathlib import Path
@@ -23,7 +23,7 @@ DATA = ROOT / "data"
 CACHE = DATA / "cache"
 EVENTS_FILE = DATA / "events.json"
 
-DEFAULT_UA = "DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)"
+DEFAULT_UA = "DividendRaiseCutBoard kennethdavis+dividends@mail.grokbot.com"
 UA = os.environ.get("SEC_USER_AGENT", "").strip() or DEFAULT_UA
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": UA, "Accept-Encoding": "gzip, deflate"})

@@ -36,7 +36,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT || 'DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)' }}
+      SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT || 'DividendRaiseCutBoard kennethdavis+dividends@mail.grokbot.com' }}
       SITE_URL: ${{ vars.SITE_URL || 'https://klicbaitinc.github.io' }}
       BASE_PATH: ${{ vars.BASE_PATH || '/dividend-board' }}
     steps:

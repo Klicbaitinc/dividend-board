@@ -22,5 +22,5 @@ jobs:
       - run: pip install requests
       - name: Probe SEC hosts
         env:
-          SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT || 'DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)' }}
+          SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT || 'DividendRaiseCutBoard kennethdavis+dividends@mail.grokbot.com' }}
         run: python scripts/probe_sec.py

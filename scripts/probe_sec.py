@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Check SEC hosts one at a time from a GitHub runner.
 
-Declared User-Agents only. No invented email address.
 The daily index is requested first, before efts.sec.gov, so a block on
 full-text search cannot poison the other results.
 """
@@ -11,16 +10,15 @@ import time
 
 import requests
 
-DEFAULT_UA = "DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)"
-ALT_UA = "Klicbaitinc DividendRaiseCutBoard https://github.com/Klicbaitinc/dividend-board"
+DEFAULT_UA = "DividendRaiseCutBoard kennethdavis+dividends@mail.grokbot.com"
 PRIMARY = os.environ.get("SEC_USER_AGENT", "").strip() or DEFAULT_UA
 
 CHECKS = [
     (PRIMARY, "https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/master.20261023.idx"),
     (PRIMARY, "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K&count=10&output=atom"),
     (PRIMARY, "https://data.sec.gov/submissions/CIK0000320193.json"),
+    (PRIMARY, "https://www.sec.gov/files/company_tickers.json"),
     (PRIMARY, "https://www.sec.gov/Archives/edgar/data/1163668/000114036126040519/ef20084210_ex99-3.htm"),
-    (ALT_UA, "https://www.sec.gov/Archives/edgar/daily-index/2026/QTR4/master.20261023.idx"),
     (PRIMARY, "https://efts.sec.gov/LATEST/search-index?q=%22quarterly%20dividend%22&forms=8-K&dateRange=custom&startdt=2026-10-20&enddt=2026-10-23"),
 ]
 

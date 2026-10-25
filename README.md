@@ -6,9 +6,9 @@ built from SEC EDGAR 8-K filings. Data only, not investment advice.
 ## Run locally
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-# SEC requires a descriptive User-Agent. Optional; the script has a project-URL default.
-# Set SEC_USER_AGENT (repo variable of the same name in Actions) to add your email.
-export SEC_USER_AGENT="DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)"
+# SEC requires a descriptive User-Agent. The script default already includes a contact email.
+# A repository variable named SEC_USER_AGENT overrides it.
+export SEC_USER_AGENT="DividendRaiseCutBoard kennethdavis+dividends@mail.grokbot.com"
 .venv/bin/python scripts/fetch_dividends.py --days 60     # writes data/events.json (merges with existing)
 # Defaults match the GitHub Pages project site. Override to preview another host.
 # export SITE_URL=https://klicbaitinc.github.io
@@ -43,8 +43,7 @@ back to `main`, builds the site, and deploys to GitHub Pages.
 * Live site: https://klicbaitinc.github.io/dividend-board/
 * Schedule: `30 1 * * *` (01:30 UTC daily), plus every push to `main` and manual dispatch.
 * Defaults: `SITE_URL=https://klicbaitinc.github.io` and `BASE_PATH=/dividend-board` (repository variables override them).
-* `SEC_USER_AGENT` repository variable overrides the built-in User-Agent. The default is `DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)` and does not invent an email.
-* From GitHub-hosted runners that default is refused with HTTP 403 "Undeclared Automated Tool" by `efts.sec.gov`, by `www.sec.gov` (daily index, the current 8-K Atom feed, and Archives documents), and by `data.sec.gov`. The refresh keeps the `data/events.json` already in the repo and the site still deploys. Set `SEC_USER_AGENT` to a declared string that includes your email, then run **Probe SEC hosts**. If `www.sec.gov` still returns 403, the refresh has to run on a network the SEC accepts (for example a self-hosted runner).
+* `SEC_USER_AGENT` repository variable overrides the built-in User-Agent. The default is `DividendRaiseCutBoard kennethdavis+dividends@mail.grokbot.com`.
 * Pages source must be **GitHub Actions**: Settings → Pages → Build and deployment → Source → GitHub Actions.
 * The data commit only changes `data/events.json` and includes `[skip ci]`. The workflow also ignores pushes that
   only touch that file, so the refresh cannot retrigger itself.
