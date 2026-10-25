@@ -64,7 +64,7 @@ jobs:
         if: steps.fetch.outcome == 'failure'
         run: |
           cp /tmp/events.json.bak data/events.json
-          echo "::warning::SEC fetch failed. Deploying the events.json already in the repo. Set the SEC_USER_AGENT repository variable to a declared User-Agent that includes a contact email SEC will accept."
+          echo "::warning::SEC fetch failed. Deploying the events.json already in the repo. GitHub-hosted runners are refused by efts.sec.gov, www.sec.gov, and data.sec.gov with the built-in User-Agent. Set the SEC_USER_AGENT repository variable to a declared string that includes a contact email, then re-run Probe SEC hosts."
       - name: Build static site
         run: python scripts/build_site.py
       - name: Check links under the project base path

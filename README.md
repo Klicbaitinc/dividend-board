@@ -43,7 +43,8 @@ back to `main`, builds the site, and deploys to GitHub Pages.
 * Live site: https://klicbaitinc.github.io/dividend-board/
 * Schedule: `30 1 * * *` (01:30 UTC daily), plus every push to `main` and manual dispatch.
 * Defaults: `SITE_URL=https://klicbaitinc.github.io` and `BASE_PATH=/dividend-board` (repository variables override them).
-* `SEC_USER_AGENT` repository variable overrides the built-in User-Agent. SEC asks for company-specific contact info in that header; if a run is blocked with "Undeclared Automated Tool", set this variable to a string that includes your email. The built-in default does not invent one.
+* `SEC_USER_AGENT` repository variable overrides the built-in User-Agent. The default is `DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)` and does not invent an email.
+* From GitHub-hosted runners that default is refused with HTTP 403 "Undeclared Automated Tool" by `efts.sec.gov`, by `www.sec.gov` (daily index, the current 8-K Atom feed, and Archives documents), and by `data.sec.gov`. The refresh keeps the `data/events.json` already in the repo and the site still deploys. Set `SEC_USER_AGENT` to a declared string that includes your email, then run **Probe SEC hosts**. If `www.sec.gov` still returns 403, the refresh has to run on a network the SEC accepts (for example a self-hosted runner).
 * Pages source must be **GitHub Actions**: Settings → Pages → Build and deployment → Source → GitHub Actions.
 * The data commit only changes `data/events.json` and includes `[skip ci]`. The workflow also ignores pushes that
   only touch that file, so the refresh cannot retrigger itself.
