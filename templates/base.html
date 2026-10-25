@@ -34,7 +34,8 @@
 <footer class="foot">
   <div class="wrap">
     <p><strong>Data only, not investment advice.</strong> Events are extracted automatically from SEC EDGAR 8-K filings and may contain errors or omissions. Always check the linked filing before acting. <a href="{{ base }}/about/">Methodology &amp; disclaimer</a>.</p>
-    <p class="muted">Data window {{ window.start | nice_date }} – {{ window.end | nice_date }} · Updated {{ generated[:16].replace('T',' ') }} UTC · © {{ year }} {{ site_name }}</p>
+    <p>Not investment advice. Some links may be affiliate links. <a href="{{ base }}/disclosure/">See disclosure</a>.</p>
+    <p class="muted">Data window {{ window.start | nice_date }} – {{ window.end | nice_date }} · Updated {{ generated[:16].replace('T',' ') }} UTC · © {{ year }} {{ site_name }} · <a href="{{ base }}/disclosure/">Disclosure</a> · <a href="{{ base }}/privacy/">Privacy</a></p>
   </div>
 </footer>
 <script src="{{ base }}/static/app.js" defer></script>

@@ -166,6 +166,16 @@ def main():
         description="How the Dividend Raise & Cut Board collects data from SEC EDGAR, and why it is not investment advice.",
         canonical="/about/"))
     pages.append(("/about/", today))
+    write("disclosure/index.html", env.get_template("disclosure.html").render(
+        **common, page_title=f"Affiliate disclosure | {SITE_NAME}",
+        description="Some links may be affiliate links. A commission never changes the dividend data and is not investment advice.",
+        canonical="/disclosure/"))
+    pages.append(("/disclosure/", today))
+    write("privacy/index.html", env.get_template("privacy.html").render(
+        **common, page_title=f"Privacy policy | {SITE_NAME}",
+        description="The Dividend Raise & Cut Board is a static site with no accounts and no cookies of its own.",
+        canonical="/privacy/"))
+    pages.append(("/privacy/", today))
     write("404.html", env.get_template("404.html").render(**common, page_title="Page not found", description="", canonical="/404.html"))
 
     write("sitemap.xml", env.get_template("sitemap.xml").render(
