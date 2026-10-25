@@ -1,0 +1,26 @@
+# One-shot check of which SEC hosts accept a declared User-Agent from GitHub runners.
+name: Probe SEC hosts
+
+on:
+  push:
+    paths:
+      - .github/workflows/sec-probe.yml
+      - scripts/probe_sec.py
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Probe SEC hosts
+        env:
+          SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT || 'DividendRaiseCutBoard (https://github.com/Klicbaitinc/dividend-board)' }}
+        run: python scripts/probe_sec.py
