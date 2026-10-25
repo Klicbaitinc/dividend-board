@@ -31,9 +31,10 @@ python3 -m http.server 8765 -d site                       # open http://localhos
 * Each event keeps `evidence` (the exact sentence), `filing_url` and `document_url`.
 * Events accumulate: each run merges into the existing `data/events.json`, so history grows over time.
 
+## Newsletter
+The signup block links to the beehiiv subscribe page, https://dividendboard.beehiiv.com/subscribe. No API key is stored in the repo.
+
 ## Placeholders (left unwired on purpose)
-* Newsletter form (`templates/_macros.html`, `signup`): set the form `action` to the beehiiv/Buttondown embed URL
-  and remove `data-placeholder`. Until then the form does not submit anywhere.
 * Affiliate slot (`offer_slot` macro): placeholder copy only. No referral links.
 
 ## Deploy

@@ -40,10 +40,3 @@ document.querySelectorAll('.search.solo').forEach(function (s) {
     items.forEach(function (a) { a.hidden = q && a.dataset.q.indexOf(q) === -1; });
   });
 });
-// Placeholder newsletter form: no data is sent anywhere until a provider (beehiiv/Buttondown) is wired up.
-document.querySelectorAll('form[data-placeholder]').forEach(function (f) {
-  f.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var note = f.parentNode.querySelector('.form-note'); if (note) note.hidden = false;
-  });
-});
