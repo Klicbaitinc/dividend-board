@@ -172,6 +172,10 @@ def main():
         urls=[(PUBLIC + u, d.isoformat()) for u, d in pages]))
     write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {PUBLIC}/sitemap.xml\n")
     (OUT / ".nojekyll").write_text("")
+    # Google Search Console file verification. Kept at the repo root and copied
+    # on every build so the daily refresh still publishes it at the site root.
+    verify_name = "googled3f97a2fd3c33754.html"
+    shutil.copyfile(ROOT / verify_name, OUT / verify_name)
     print(f"Built {len(pages)} pages, {len(tickers)} stock pages, {len(week_list)} weeks -> {OUT}")
 
 if __name__ == "__main__":
