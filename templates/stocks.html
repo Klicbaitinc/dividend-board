@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Stocks A–Z</h1>
+<p class="lede">{{ stocks|length }} companies with a dividend change on the board.</p>
+<input class="search solo" type="search" placeholder="Filter tickers…" aria-label="Filter tickers" data-target=".stock-list a">
+<div class="stock-list">
+{% for s in stocks %}
+  <a href="{{ base }}/stock/{{ s.ticker }}/" data-q="{{ (s.ticker ~ ' ' ~ s.company)|lower }}"><b>{{ s.ticker }}</b><span>{{ s.company }}</span><span class="badge {{ s.latest.type }}">{{ s.latest.label }}</span></a>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% macro events_table(events, base, show_company=True, id="t") %}
+<div class="table-tools">
+  <div class="chips" role="group" aria-label="Filter by type">
+    <button class="chip on" data-filter="all">All <span>{{ events|length }}</span></button>
+    <button class="chip raise" data-filter="raise">Raises <span>{{ events|selectattr('type','equalto','raise')|list|length }}</span></button>
+    <button class="chip cut" data-filter="cut">Cuts <span>{{ events|selectattr('type','equalto','cut')|list|length }}</span></button>
+    <button class="chip suspension" data-filter="suspension">Suspensions <span>{{ events|selectattr('type','equalto','suspension')|list|length }}</span></button>
+    <button class="chip initiation" data-filter="initiation">New <span>{{ events|selectattr('type','equalto','initiation')|list|length }}</span></button>
+  </div>
+  <input class="search" type="search" placeholder="Search ticker or company…" aria-label="Search ticker or company">
+</div>
+{% if events %}
+<div class="table-scroll">
+<table class="events" id="{{ id }}">
+  <thead><tr>
+    <th data-sort="date">Filed</th><th data-sort="text">Stock</th><th data-sort="text">Change</th>
+    <th class="num col-old" data-sort="num">Old</th><th class="num" data-sort="num">New</th><th class="num" data-sort="num">% chg</th><th>Source</th>
+  </tr></thead>
+  <tbody>
+  {% for e in events %}
+  <tr class="row-{{ e.type }}" data-type="{{ e.type }}" data-q="{{ (e.ticker ~ ' ' ~ e.company)|lower }}">
+    <td data-v="{{ e.date }}" class="nowrap">{{ e.date | nice_date }}</td>
+    <td><a class="tk" href="{{ base }}/stock/{{ e.ticker }}/">{{ e.ticker }}</a>{% if show_company %}<span class="co">{{ e.company }}</span>{% endif %}</td>
+    <td><span class="badge {{ e.type }}">{{ e.label }}</span>{% if e.confidence == 'inferred' %} <span class="flag" title="No explicit wording; the declared amount is lower than the previous declaration. Verify in the filing.">inferred</span>{% endif %}{% if e.frequency %}<span class="freq">{{ e.frequency }}</span>{% endif %}</td>
+    <td class="num col-old" data-v="{{ e.old_amount or '' }}">{{ e.old_amount | money or '—' }}</td>
+    <td class="num" data-v="{{ e.new_amount or '' }}">{{ e.new_amount | money or '—' }}</td>
+    <td class="num pct {% if e.pct_change and e.pct_change < 0 %}neg{% elif e.pct_change %}pos{% endif %}" data-v="{{ e.pct_change if e.pct_change is not none else '' }}">{{ e.pct_change | pct or '—' }}</td>
+    <td><a class="src" href="{{ e.filing_url }}" rel="nofollow noopener" target="_blank" title="{{ e.evidence }}">SEC {{ e.form or '8-K' }} ↗</a></td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="empty-msg" hidden>No matching events.</p>
+{% else %}
+<p class="empty">No dividend changes captured for this period yet.</p>
+{% endif %}
+{% endmacro %}
+
+{% macro signup(base) %}
+<section class="card signup" id="newsletter">
+  <h2>Get the Friday dividend email</h2>
+  <p>Every raise, cut and suspension from the week, in one short email. Free.</p>
+  <!-- PLACEHOLDER: wire this form to beehiiv or Buttondown (set action to the provider's embed URL). -->
+  <form class="signup-form" action="#" method="post" data-placeholder="true">
+    <input type="email" name="email" required placeholder="you@example.com" aria-label="Email address">
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="muted small form-note" hidden>Thanks! The newsletter launches soon. Signups are not being collected yet.</p>
+</section>
+{% endmacro %}
+
+{% macro offer_slot() %}
+<!-- AFFILIATE SLOT: placeholder only. Add broker referral links here later, with clear "sponsored" disclosure. -->
+<aside class="card offer" aria-label="Sponsored offers (coming soon)">
+  <p class="offer-kicker">Sponsored · coming soon</p>
+  <p class="offer-title">Start investing with $100</p>
+  <p class="muted small">Broker offers coming soon.</p>
+</aside>
+{% endmacro %}

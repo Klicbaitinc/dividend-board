@@ -1,0 +1,64 @@
+{% extends "base.html" %}{% from "_macros.html" import signup, offer_slot %}
+{% block head %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Did {{ tk }} cut its dividend?","acceptedAnswer":{"@type":"Answer","text":"{% if cuts %}Yes. SEC filings show a dividend {{ cuts[0].label|lower }} by {{ company }} filed {{ cuts[0].date | nice_date }}.{% else %}No dividend cut or suspension by {{ company }} appears in SEC 8-K filings we track since {{ window.start | nice_date }}. The latest change was a {{ latest.label|lower }} filed {{ latest.date | nice_date }}.{% endif %}"}}]}
+</script>
+{% endblock %}
+{% block content %}
+<p class="crumbs"><a href="{{ base }}/stocks/">Stocks</a> / {{ tk }}</p>
+<h1>Did {{ tk }} cut its dividend?</h1>
+<p class="company">{{ company }} · dividend history</p>
+
+<section class="answer card {% if cuts %}is-cut{% else %}is-ok{% endif %}">
+  {% if cuts %}
+    <p class="answer-big">Yes, {{ cuts|length }} {{ 'cut or suspension' if cuts|length == 1 else 'cuts or suspensions' }} on record.</p>
+    <p>Most recent: <span class="badge {{ cuts[0].type }}">{{ cuts[0].label }}</span> filed {{ cuts[0].date | nice_date }}{% if cuts[0].new_amount %}, new amount {{ cuts[0].new_amount | money }} per share{% endif %}{% if cuts[0].pct_change %} ({{ cuts[0].pct_change | pct }}){% endif %}.</p>
+  {% else %}
+    <p class="answer-big">No cut found.</p>
+    <p>We found no dividend cut or suspension by {{ company }} in SEC 8-K filings since {{ window.start | nice_date }}. Latest change: <span class="badge {{ latest.type }}">{{ latest.label }}</span> filed {{ latest.date | nice_date }}{% if latest.pct_change %} ({{ latest.pct_change | pct }}){% endif %}.</p>
+  {% endif %}
+</section>
+
+<div class="grid">
+<div class="main-col">
+<h2>Dividend changes</h2>
+<div class="table-scroll">
+<table class="events">
+  <thead><tr><th>Filed</th><th>Change</th><th class="num col-old">Old</th><th class="num">New</th><th class="num">% chg</th><th>Source</th></tr></thead>
+  <tbody>
+  {% for e in events %}
+  <tr class="row-{{ e.type }}">
+    <td class="nowrap">{{ e.date | nice_date }}</td>
+    <td><span class="badge {{ e.type }}">{{ e.label }}</span>{% if e.confidence == 'inferred' %} <span class="flag">inferred</span>{% endif %}{% if e.frequency %}<span class="freq">{{ e.frequency }}</span>{% endif %}</td>
+    <td class="num col-old">{{ e.old_amount | money or '—' }}</td>
+    <td class="num">{{ e.new_amount | money or '—' }}</td>
+    <td class="num pct {% if e.pct_change and e.pct_change < 0 %}neg{% elif e.pct_change %}pos{% endif %}">{{ e.pct_change | pct or '—' }}</td>
+    <td><a class="src" href="{{ e.filing_url }}" rel="nofollow noopener" target="_blank">SEC filing ↗</a></td>
+  </tr>
+  <tr class="evidence-row"><td colspan="6"><blockquote>“{{ e.evidence }}”</blockquote>{% if e.amount_note %}<p class="muted small">Note: {{ e.amount_note }}.</p>{% endif %}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% if decls %}
+<h2 class="mt">Declared regular dividends on file</h2>
+<div class="table-scroll">
+<table class="events compact">
+  <thead><tr><th>Filed</th><th>Frequency</th><th class="num">Amount / share</th><th>Source</th></tr></thead>
+  <tbody>
+  {% for d in decls %}
+  <tr><td class="nowrap">{{ d.date | nice_date }}</td><td>{{ d.frequency or '—' }}</td><td class="num">{{ d.amount | money }}</td><td><a class="src" href="{{ d.filing_url }}" rel="nofollow noopener" target="_blank">SEC filing ↗</a></td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+<p class="muted small mt">History covers 8-K filings since {{ window.start | nice_date }} found by SEC full-text search. Older changes, and announcements made only by press release, may be missing.</p>
+</div>
+<div class="side-col">
+{{ signup(base) }}
+{{ offer_slot() }}
+</div>
+</div>
+{% endblock %}

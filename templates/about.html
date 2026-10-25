@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="prose">
+<h1>About the Dividend Raise &amp; Cut Board</h1>
+<p>A free, no-login board of US dividend <b>raises</b>, <b>cuts</b>, <b>suspensions</b> and <b>new dividends</b>, updated daily from public SEC filings.</p>
+
+<h2>Where the data comes from</h2>
+<p>Every entry comes from a Form 8-K (and its press-release exhibits) filed with the U.S. Securities and Exchange Commission and found through <a href="https://efts.sec.gov/LATEST/search-index?q=%22quarterly%20dividend%22&forms=8-K" rel="nofollow">EDGAR full-text search</a>. A script reads the announcement sentence, decides whether it describes a raise, cut, suspension or new dividend, and pulls out the old and new per-share amounts when the filing states them.</p>
+<ul>
+  <li>Each row links to the original filing, and stock pages quote the exact sentence we used.</li>
+  <li>If we couldn't read an amount automatically, the cell shows "—". We never estimate amounts.</li>
+  <li>Rows marked <span class="flag">inferred</span> had no explicit "cut" wording. The newly declared amount was just lower than the company's previous declaration. Check those in the filing.</li>
+  <li>Preferred-stock coupons, special dividends and variable dividends are left out.</li>
+  <li>Companies that announce only by press release, without filing an 8-K, won't show up.</li>
+</ul>
+
+<h2 id="disclaimer">Disclaimer</h2>
+<p><b>This site provides data only and is not investment, tax or financial advice.</b> Nothing here recommends buying, selling or holding any security. Entries are generated automatically and may be incomplete, late or wrong. Always confirm with the company's official filing or investor-relations page. Past dividend changes don't predict future ones. You are responsible for your own investment decisions.</p>
+<p>We may later show clearly labeled sponsored offers, such as broker referral links. Sponsorship will never change the data.</p>
+
+<h2>Newsletter</h2>
+<p>A free Friday email with the week's changes is coming soon.</p>
+</article>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Weekly archive</h1>
+<p class="lede">Every week of dividend changes captured from SEC 8-K filings.</p>
+<div class="weeks">
+{% for w in weeks %}
+  <a class="week card" href="{{ base }}/week/{{ w.key }}/">
+    <span class="wk">{{ w.start | nice_date }} – {{ w.end | nice_date }}</span>
+    <span class="wk-counts">
+      <span class="badge raise">{{ w.counts.raise }} raises</span>
+      {% if w.counts.cut %}<span class="badge cut">{{ w.counts.cut }} cuts</span>{% endif %}
+      {% if w.counts.suspension %}<span class="badge suspension">{{ w.counts.suspension }} suspensions</span>{% endif %}
+      {% if w.counts.initiation %}<span class="badge initiation">{{ w.counts.initiation }} new</span>{% endif %}
+    </span>
+  </a>
+{% endfor %}
+</div>
+{% endblock %}

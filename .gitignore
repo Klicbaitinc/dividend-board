@@ -1,0 +1,7 @@
+.venv/
+data/cache/
+data/backfill.log
+data/events_60d.json
+site/
+screenshots/
+__pycache__/

@@ -1,0 +1,39 @@
+{% extends "base.html" %}{% from "_macros.html" import events_table, signup, offer_slot %}
+{% block content %}
+<section class="hero">
+  <h1>Every dividend raise, cut &amp; suspension, every week.</h1>
+  <p class="lede">Pulled straight from SEC filings. Free, no login, with a link to the source for every entry.</p>
+  <div class="stats">
+    <div class="stat"><b>{{ this_week.events|length }}</b><span>changes this week</span></div>
+    <div class="stat raise"><b>{{ this_week.events|selectattr('type','equalto','raise')|list|length }}</b><span>raises</span></div>
+    <div class="stat cut"><b>{{ this_week.events|selectattr('type','in',['cut','suspension'])|list|length }}</b><span>cuts &amp; suspensions</span></div>
+    <div class="stat"><b>{{ n_tickers }}</b><span>stocks tracked</span></div>
+  </div>
+</section>
+
+<div class="grid">
+  <div class="main-col">
+    <h2>This week <span class="muted">· {{ this_week.start | nice_date }} – {{ this_week.end | nice_date }}</span></h2>
+    {{ events_table(this_week.events, base, id="week") }}
+    {% if recent %}
+    <h2 class="mt">Earlier in the last 30 days</h2>
+    {{ events_table(recent, base, id="recent") }}
+    {% endif %}
+    <p class="mt"><a class="btn ghost" href="{{ base }}/archive/">Browse every week →</a></p>
+  </div>
+  <div class="side-col">
+    {{ signup(base) }}
+    {{ offer_slot() }}
+    <section class="card">
+      <h3>How to read this</h3>
+      <ul class="legend">
+        <li><span class="badge raise">Raise</span> regular dividend increased</li>
+        <li><span class="badge cut">Cut</span> regular dividend reduced</li>
+        <li><span class="badge suspension">Suspension</span> dividend paused or eliminated</li>
+        <li><span class="badge initiation">New dividend</span> first or reinstated dividend</li>
+      </ul>
+      <p class="muted small">"—" means we couldn't read that amount from the filing automatically. Hover or tap the SEC link to see the sentence we used.</p>
+    </section>
+  </div>
+</div>
+{% endblock %}

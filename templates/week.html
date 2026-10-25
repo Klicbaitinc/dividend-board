@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% from "_macros.html" import events_table, signup %}
+{% block content %}
+<p class="crumbs"><a href="{{ base }}/archive/">Archive</a> / {{ w.key }}</p>
+<h1>Dividend changes, {{ w.start | nice_date }} – {{ w.end | nice_date }}</h1>
+{% macro n(c, one, many) %}{{ c }} {{ one if c == 1 else many }}{% endmacro %}
+<p class="lede">{{ n(w.events|length, 'change', 'changes') }}: {{ n(w.counts.raise, 'raise', 'raises') }}, {{ n(w.counts.cut, 'cut', 'cuts') }}, {{ n(w.counts.suspension, 'suspension', 'suspensions') }}, {{ n(w.counts.initiation, 'new dividend', 'new dividends') }}.</p>
+{{ events_table(w.events, base) }}
+<div class="mt">{{ signup(base) }}</div>
+{% endblock %}

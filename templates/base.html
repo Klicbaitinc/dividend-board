@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ public_url }}{{ canonical }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ public_url }}{{ canonical }}">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="stylesheet" href="{{ base }}/static/style.css">
+{% block head %}{% endblock %}
+</head>
+<body>
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="{{ base }}/"><span class="logo">▲▼</span> Dividend Raise &amp; Cut Board</a>
+    <nav>
+      <a href="{{ base }}/">This week</a>
+      <a href="{{ base }}/archive/">Archive</a>
+      <a href="{{ base }}/stocks/">Stocks A–Z</a>
+      <a href="{{ base }}/about/">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Data only, not investment advice.</strong> Events are extracted automatically from SEC EDGAR 8-K filings and may contain errors or omissions. Always check the linked filing before acting. <a href="{{ base }}/about/">Methodology &amp; disclaimer</a>.</p>
+    <p class="muted">Data window {{ window.start | nice_date }} – {{ window.end | nice_date }} · Updated {{ generated[:16].replace('T',' ') }} UTC · © {{ year }} {{ site_name }}</p>
+  </div>
+</footer>
+<script src="{{ base }}/static/app.js" defer></script>
+</body>
+</html>
