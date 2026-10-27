@@ -1,11 +1,61 @@
 {
- "generated_at": "2026-10-26T02:02:59+00:00",
+ "generated_at": "2026-10-27T02:01:40+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
-  "end": "2026-10-26"
+  "end": "2026-10-27"
  },
  "events": [
+  {
+   "id": "0000874766-26-000079",
+   "ticker": "HIG",
+   "company": "HARTFORD INSURANCE GROUP, INC.",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/874766/000087476626000079/0000874766-26-000079-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/874766/000087476626000079/ex991earningsnewsrelease93.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": null,
+   "new_amount": 0.67,
+   "pct_change": null,
+   "frequency": "quarterly",
+   "confidence": "medium",
+   "evidence": "Increased the quarterly common dividend per share by 12%, to $0.67, payable Jan. 5, 2027, to shareholders of record at the close of business on Dec. 1, 2026"
+  },
+  {
+   "id": "0001367859-26-000056",
+   "ticker": "CZWI",
+   "company": "Citizens Community Bancorp Inc.",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1367859/000136785926000056/0001367859-26-000056-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1367859/000136785926000056/exhibit991earningsrelczwi2.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": 0.105,
+   "new_amount": 0.12,
+   "pct_change": 14.29,
+   "frequency": "quarterly",
+   "confidence": "medium",
+   "evidence": "Board Approves 14% Increase in Quarterly Dividend to $0.12 per Share",
+   "previous_filing_url": "https://www.sec.gov/Archives/edgar/data/1367859/000136785926000041/0001367859-26-000041-index.htm",
+   "amount_note": "old amount from previous declaration filed 2026-07-27"
+  },
+  {
+   "id": "0000008947-26-000200",
+   "ticker": "AZZ",
+   "company": "AZZ INC",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/8947/000000894726000200/0000008947-26-000200-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/8947/000000894726000200/azz_invpreso10232026.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": null,
+   "new_amount": null,
+   "pct_change": 20.0,
+   "frequency": null,
+   "confidence": "medium",
+   "evidence": "EBITDA balance sheet allows AZZ to invest, acquire, AND return capital \u2014 without trade-offs. +20% dividend increase recently announced June 2026 (1) Share repurchases YTD as of 08/31/2026 (2) FY2027 Cash flow from operations as of 08/31/2026 14AZZ Inc."
+  },
   {
    "id": "0001140361-26-040519",
    "ticker": "SPFI",
@@ -6916,6 +6966,83 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.3,
+   "frequency": null,
+   "evidence": "Declared a $0.30 per share dividend",
+   "id": "0001628280-26-067288",
+   "ticker": "SSD",
+   "company": "Simpson Manufacturing Co., Inc.",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/920371/000162828026067288/0001628280-26-067288-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/920371/000162828026067288/q32026ex991earningsrelease.htm"
+  },
+  {
+   "amount": 0.2,
+   "frequency": "quarterly",
+   "evidence": "The Company also announced that its Board of Directors declared a quarterly cash dividend of $0.20 per share payable on November 17, 2026 to shareholders of record as of November 5, 2026.",
+   "id": "0001471265-26-000044",
+   "ticker": "NWBI",
+   "company": "Northwest Bancshares, Inc.",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1471265/000147126526000044/0001471265-26-000044-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1471265/000147126526000044/a2026-09x30nwbi8ker.htm"
+  },
+  {
+   "amount": 0.12,
+   "frequency": "quarterly",
+   "evidence": "On October 22, 2026, the Board of Directors declared a quarterly cash dividend of $0.12 per share to shareholders of record as of November 6, 2026, payable on November 20, 2026",
+   "id": "0001367859-26-000056",
+   "ticker": "CZWI",
+   "company": "Citizens Community Bancorp Inc.",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1367859/000136785926000056/0001367859-26-000056-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1367859/000136785926000056/czwi-20261026.htm"
+  },
+  {
+   "amount": 0.12,
+   "frequency": "quarterly",
+   "evidence": "of directors of Commercial declared a quarterly cash dividend of $0.12 per share of Commercial common stock payable on December 30, 2026,",
+   "id": "0001213900-26-112550",
+   "ticker": "CBK",
+   "company": "Commercial Bancgroup, Inc.",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1981546/000121390026112550/0001213900-26-112550-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1981546/000121390026112550/ea030947201ex99-3.htm"
+  },
+  {
+   "amount": 0.33,
+   "frequency": "quarterly",
+   "evidence": "The Company\u2019s Board of Directors declared a quarterly cash dividend of $0.3300 per common share (equivalent to $1.32 per annum), which represents a 7.3% increase",
+   "id": "0001581068-26-000032",
+   "ticker": "BRX",
+   "company": "Brixmor Property Group Inc.",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1581068/000158106826000032/0001581068-26-000032-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1581068/000158106826000032/brx-20261026ex991.htm"
+  },
+  {
+   "amount": 0.7,
+   "frequency": "quarterly",
+   "evidence": "The Company\u2019s Board of Directors declared a quarterly cash dividend of $0.70 per share on the Company\u2019s outstanding common shares.",
+   "id": "0000046195-26-000062",
+   "ticker": "BOH",
+   "company": "BANK OF HAWAII CORP",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/46195/000004619526000062/0000046195-26-000062-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/46195/000004619526000062/ex991earningsrelease093026.htm"
+  },
+  {
+   "amount": 0.25,
+   "frequency": "quarterly",
+   "evidence": "The Board of Directors declared a cash dividend of $0.25 per share on October 22, 2026, which was the 86th consecutive quarterly dividend declared by Bancorp.",
+   "id": "0001403475-26-000043",
+   "ticker": "BMRC",
+   "company": "Bank of Marin Bancorp",
+   "date": "2026-10-26",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1403475/000140347526000043/0001403475-26-000043-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1403475/000140347526000043/earningsrelease-ex991q32026.htm"
+  },
   {
    "amount": 0.14,
    "frequency": "quarterly",
