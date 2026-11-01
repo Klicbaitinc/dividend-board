@@ -10,6 +10,7 @@ Env (blank values fall back to the GitHub project-site defaults):
 import datetime as dt, json, os, re, shutil
 from collections import defaultdict
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -30,6 +31,33 @@ else:
 # Absolute public prefix, e.g. https://klicbaitinc.github.io/dividend-board
 PUBLIC = SITE_URL + BASE
 SITE_NAME = "Dividend Raise & Cut Board"
+OFFER_PATH = ROOT / "config" / "offer.json"
+
+def load_offer():
+    offer = json.loads(OFFER_PATH.read_text())
+    missing = [k for k in ("name", "headline", "body", "button", "features_label", "disclosure", "sa_author", "utm_source", "links") if k not in offer]
+    if missing or "signup" not in offer.get("links", {}) or "features" not in offer.get("links", {}):
+        raise SystemExit(f"config/offer.json is missing fields: {', '.join(missing) or 'links.signup/features'}")
+    return offer
+
+def offer_href(url, placement, offer):
+    """Append tracking params. sa_author stays on every link; utm_content names the placement."""
+    parts = urlsplit(url)
+    query = []
+    seen_author = False
+    for key, value in parse_qsl(parts.query, keep_blank_values=True):
+        if key in ("utm_source", "utm_content"):
+            continue
+        if key == "sa_author":
+            query.append((key, offer["sa_author"]))
+            seen_author = True
+        else:
+            query.append((key, value))
+    if not seen_author:
+        query.append(("sa_author", offer["sa_author"]))
+    query.append(("utm_source", offer["utm_source"]))
+    query.append(("utm_content", placement))
+    return urlunsplit(parts._replace(query=urlencode(query)))
 
 env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html", "xml"]))
 
@@ -111,8 +139,10 @@ def main():
         if d["ticker"] in tickers:
             tickers[d["ticker"]]["decls"].append(d)
 
+    offer = load_offer()
+    env.globals["offer_href"] = lambda url, placement, offer=offer: offer_href(url, placement, offer)
     common = dict(base=BASE, site_url=SITE_URL, public_url=PUBLIC, site_name=SITE_NAME,
-                  generated=data["generated_at"], window=data["window"], year=today.year)
+                  generated=data["generated_at"], window=data["window"], year=today.year, offer=offer)
     pages = []
 
     # homepage
@@ -168,7 +198,7 @@ def main():
     pages.append(("/about/", today))
     write("disclosure/index.html", env.get_template("disclosure.html").render(
         **common, page_title=f"Affiliate disclosure | {SITE_NAME}",
-        description="Some links may be affiliate links. A commission never changes the dividend data and is not investment advice.",
+        description="This site earns affiliate commissions. The dividend data is unchanged, and nothing here is investment advice.",
         canonical="/disclosure/"))
     pages.append(("/disclosure/", today))
     write("privacy/index.html", env.get_template("privacy.html").render(

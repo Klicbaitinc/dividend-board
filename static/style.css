@@ -50,8 +50,10 @@ table.events{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nu
 .signup-form input{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit}
 .signup-form button,.btn{background:var(--ink);color:#fff;border:0;border-radius:10px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer;display:inline-block}
 .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn:hover{text-decoration:none}
-.offer{border-style:dashed;background:#fbfdff}.offer-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0}
-.offer-title{font-weight:800;font-size:17px;margin:4px 0}
+.offer{border-left:4px solid #1d4ed8}.offer p{margin:0 0 8px}.offer p:last-child{margin-bottom:0}
+.offer-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0}
+.offer-title{font-weight:800;font-size:17px;margin:4px 0 6px;letter-spacing:-.01em}
+.offer-actions{margin:10px 0 8px}.offer-disclosure{font-size:13px;color:#334155;margin-top:10px}
 .legend{list-style:none;padding:0;margin:0 0 10px;display:grid;gap:6px;font-size:13.5px}
 .weeks{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
 .week{display:flex;flex-direction:column;gap:8px;color:var(--ink)}.week:hover{text-decoration:none;border-color:#94a3b8}

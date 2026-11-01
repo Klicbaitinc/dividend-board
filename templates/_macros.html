@@ -45,11 +45,13 @@
 </section>
 {% endmacro %}
 
-{% macro offer_slot() %}
-<!-- AFFILIATE SLOT: placeholder only. Add broker referral links here later, with clear "sponsored" disclosure. -->
-<aside class="card offer" aria-label="Sponsored offers (coming soon)">
-  <p class="offer-kicker">Sponsored · coming soon</p>
-  <p class="offer-title">Start investing with $100</p>
-  <p class="muted small">Broker offers coming soon.</p>
+{% macro offer_slot(offer, placement) %}
+<aside class="card offer" aria-label="Affiliate offer: {{ offer.name }}">
+  <p class="offer-kicker">Affiliate · {{ offer.name }}</p>
+  <p class="offer-title">{{ offer.headline }}</p>
+  <p>{{ offer.body }}</p>
+  <p class="offer-actions"><a class="btn" href="{{ offer_href(offer.links.signup, placement) }}" rel="sponsored noopener" target="_blank">{{ offer.button }}</a></p>
+  <p><a href="{{ offer_href(offer.links.features, placement) }}" rel="sponsored noopener" target="_blank">{{ offer.features_label }}</a></p>
+  <p class="offer-disclosure">{{ offer.disclosure }}</p>
 </aside>
 {% endmacro %}

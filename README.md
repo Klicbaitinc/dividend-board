@@ -34,8 +34,8 @@ python3 -m http.server 8765 -d site                       # open http://localhos
 ## Newsletter
 The signup block links to the beehiiv subscribe page, https://dividendboard.beehiiv.com/subscribe. No API key is stored in the repo.
 
-## Placeholders (left unwired on purpose)
-* Affiliate slot (`offer_slot` macro): placeholder copy only. No referral links.
+## Affiliate offer
+`config/offer.json` is the only place the Stock Rover offer is defined (headline, bases, `sa_author`, `utm_source`). `offer_slot` in `templates/_macros.html` renders it. The homepage sidebar uses `utm_content=sidebar`. Each stock page uses `utm_content=ticker_page`. Both links keep `sa_author=klicbaitinc` and open with `rel="sponsored noopener"`.
 
 ## Deploy
 `.github/workflows/refresh-and-deploy.yml` refreshes the last 14 days of filings, commits `data/events.json`
