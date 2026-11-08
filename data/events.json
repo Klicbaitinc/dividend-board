@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-06T02:26:14+00:00",
+ "generated_at": "2026-11-08T02:18:39+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
-  "end": "2026-11-06"
+  "end": "2026-11-08"
  },
  "events": [
   {
@@ -7698,6 +7698,83 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.46,
+   "frequency": "quarterly",
+   "evidence": "The Company\u2019s Board of Directors declared a quarterly dividend of $0.46 to be payable on December 11, 2026, to shareholders of record on November 16, 2026, consistent with the Company\u2019s longstanding practice of delivering value to shareholders",
+   "id": "0000885978-26-000075",
+   "ticker": "USPH",
+   "company": "U S PHYSICAL THERAPY INC /NV",
+   "date": "2026-11-06",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/885978/000088597826000075/0000885978-26-000075-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/885978/000088597826000075/f2026q3earningsreleasefinal.htm"
+  },
+  {
+   "amount": 0.02,
+   "frequency": "quarterly",
+   "evidence": "(OTCQX: TBTC) declared a quarterly cash dividend of $0.02 per share on the Company's common stock.",
+   "id": "0001437749-26-035622",
+   "ticker": "TBTC",
+   "company": "TABLE TRAC INC",
+   "date": "2026-11-06",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1090396/000143774926035622/0001437749-26-035622-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1090396/000143774926035622/ex_1037734.htm"
+  },
+  {
+   "amount": 0.0425,
+   "frequency": "quarterly",
+   "evidence": "On November 3, 2026, the Board declared a quarterly dividend of $0.0425 per share of Common Stock payable on February 12, 2027 to stockholders of record on January 29, 2027",
+   "id": "0000874396-26-000058",
+   "ticker": "LCUT",
+   "company": "LIFETIME BRANDS, INC",
+   "date": "2026-11-06",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/874396/000087439626000058/0000874396-26-000058-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/874396/000087439626000058/ex99111062026-reissued.htm"
+  },
+  {
+   "amount": 0.2,
+   "frequency": "quarterly",
+   "evidence": "(NYSE: KNX) (the \"Company\" or \"Knight-Swift\") announced today that its board of directors (\"the Board\") has declared the Company\u2019s quarterly cash dividend of $0.20 per share of common stock.",
+   "id": "0001492691-26-000071",
+   "ticker": "KNX",
+   "company": "Knight-Swift Transportation Holdings Inc.",
+   "date": "2026-11-06",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1492691/000149269126000071/0001492691-26-000071-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1492691/000149269126000071/knx-exhibit9911062026.htm"
+  },
+  {
+   "amount": 0.23,
+   "frequency": "quarterly",
+   "evidence": "MILPITAS, Calif., Nov. 5, 2026 \u2014 The KLA Corporation (NASDAQ: KLAC) Board of Directors today declared a quarterly cash dividend of $0.23 per share on",
+   "id": "0001193125-26-451824",
+   "ticker": "KLAC",
+   "company": "KLA CORP",
+   "date": "2026-11-06",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/319201/000119312526451824/0001193125-26-451824-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/319201/000119312526451824/d76372dex991.htm"
+  },
+  {
+   "amount": 0.35,
+   "frequency": "quarterly",
+   "evidence": "Essent also announced today that its Board of Directors has declared a quarterly cash dividend of $0.35 per common share.",
+   "id": "0001448893-26-000029",
+   "ticker": "ESNT",
+   "company": "Essent Group Ltd.",
+   "date": "2026-11-06",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1448893/000144889326000029/0001448893-26-000029-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1448893/000144889326000029/a93026financialsupplement.htm"
+  },
+  {
+   "amount": 0.5025,
+   "frequency": "quarterly",
+   "evidence": "The board of directors of BAM declared a quarterly dividend of $0.5025 per share, payable on December 31, 2026, to shareholders of record as of the close of business on November 30, 2026",
+   "id": "0001171843-26-007210",
+   "ticker": "BAM",
+   "company": "Brookfield Asset Management Ltd.",
+   "date": "2026-11-06",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1937926/000117184326007210/0001171843-26-007210-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1937926/000117184326007210/exh_991.htm"
+  },
   {
    "amount": 0.75,
    "frequency": "quarterly",
