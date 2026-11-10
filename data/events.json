@@ -1,11 +1,43 @@
 {
- "generated_at": "2026-11-09T02:24:00+00:00",
+ "generated_at": "2026-11-10T02:20:33+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
-  "end": "2026-11-09"
+  "end": "2026-11-10"
  },
  "events": [
+  {
+   "id": "0000883237-26-000064",
+   "ticker": "VRTS",
+   "company": "VIRTUS INVESTMENT PARTNERS, INC.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/883237/000088323726000064/0000883237-26-000064-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/883237/000088323726000064/docq32026earningsrelease.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": null,
+   "new_amount": 2.45,
+   "pct_change": 2.0,
+   "frequency": "quarterly",
+   "confidence": "medium",
+   "evidence": "During the quarter, the co mpany repurchased 64,666 shares for $10.0 million and increased its quarterly dividend by 2% to $2.45 per share"
+  },
+  {
+   "id": "0001013871-26-000022",
+   "ticker": "NRG",
+   "company": "NRG ENERGY, INC.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000022/0001013871-26-000022-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000022/nrgq32026ex991.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": null,
+   "new_amount": 2.05,
+   "pct_change": 8.0,
+   "frequency": "annual",
+   "confidence": "medium",
+   "evidence": "The Company is also announcing its 2027 base capital allocation plan, which includes $1 billion of debt reduction, $1 billion of share repurchases and an 8% increase in the annual common dividend to $2.05 per share, consistent with the Company\u2019s 7\u20139% long-term dividend growth target"
+  },
   {
    "id": "0001193125-26-448401",
    "ticker": "TRGP",
@@ -7698,6 +7730,149 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.2,
+   "frequency": "quarterly",
+   "evidence": "(\u201cWarner Music Group\u201d or \u201cWMG\u201d) today announced that its Board of Directors declared a regular quarterly cash dividend of $0.20 per",
+   "id": "0001193125-26-452761",
+   "ticker": "WMG",
+   "company": "Warner Music Group Corp.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1319161/000119312526452761/0001193125-26-452761-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1319161/000119312526452761/d165010dex991.htm"
+  },
+  {
+   "amount": 0.17,
+   "frequency": "quarterly",
+   "evidence": "Today, the Company announced that its Board of Directors declared a quarterly cash dividend of $0.17 per share, payable on December 7, 2026 to shareholders of record at the close of business on November 23, 2026",
+   "id": "0001206264-26-000129",
+   "ticker": "SGI",
+   "company": "SOMNIGROUP INTERNATIONAL INC.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1206264/000120626426000129/0001206264-26-000129-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1206264/000120626426000129/sgireports3q2026results.htm"
+  },
+  {
+   "amount": 0.06,
+   "frequency": "quarterly",
+   "evidence": "On November 9, 2026, the Board of Directors declared a quarterly cash dividend of $0.06 per share payable December 4, 2026 to common stockholders of record at the close of business on November 20, 2026.",
+   "id": "0001628280-26-072263",
+   "ticker": "RNGR",
+   "company": "Ranger Energy Services, Inc.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1699039/000162828026072263/0001628280-26-072263-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1699039/000162828026072263/rng-20261109.htm"
+  },
+  {
+   "amount": 0.33,
+   "frequency": "quarterly",
+   "evidence": "On November 6, 2026, the Company declared a quarterly cash dividend of $0.33 per common share, payable on December 17, 2026, to shareholders of record on November 25, 2026",
+   "id": "0001628280-26-071893",
+   "ticker": "RBA",
+   "company": "RB GLOBAL INC.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1046102/000162828026071893/0001628280-26-071893-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1046102/000162828026071893/rbaq320268kex991.htm"
+  },
+  {
+   "amount": 0.475,
+   "frequency": "quarterly",
+   "evidence": "On October 19, 2026, NRG declared a quarterly dividend of $0.475 per common share, or $1.90 per share on an annualized basis.",
+   "id": "0001013871-26-000022",
+   "ticker": "NRG",
+   "company": "NRG ENERGY, INC.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000022/0001013871-26-000022-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000022/nrgq32026ex991.htm"
+  },
+  {
+   "amount": 0.16,
+   "frequency": "quarterly",
+   "evidence": "Quarterly Dividend: Our Board of Directors recently declared a quarterly cash dividend of $0.16 per share of common stock, payable on December 2, 2026, to stockholders of record at the close of business on November 19, 2026.",
+   "id": "0001084991-26-000094",
+   "ticker": "NGS",
+   "company": "NATURAL GAS SERVICES GROUP INC",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1084991/000108499126000094/0001084991-26-000094-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1084991/000108499126000094/a2026q3earningsreleaseex991.htm"
+  },
+  {
+   "amount": 0.1,
+   "frequency": null,
+   "evidence": "Reports Third Quarter 2026 Financial Results and Declares Cash Dividend of $0.10 Per Share",
+   "id": "0001493152-26-050598",
+   "ticker": "NESR",
+   "company": "National Energy Services Reunited Corp.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1698514/000149315226050598/0001493152-26-050598-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1698514/000149315226050598/ex99-1.htm"
+  },
+  {
+   "amount": 0.175,
+   "frequency": "quarterly",
+   "evidence": "On November 6, 2026, the Registrant issued a press release announcing that its Board has declared a regular quarterly cash dividend of 17.5 cents per share on its common stock.",
+   "id": "0000089439-26-000044",
+   "ticker": "MLI",
+   "company": "MUELLER INDUSTRIES INC",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/89439/000008943926000044/0000089439-26-000044-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/89439/000008943926000044/mli-20261106.htm"
+  },
+  {
+   "amount": 0.5325,
+   "frequency": "quarterly",
+   "evidence": "Declared quarterly dividend of $0.5325 per share, representing an annualized dividend rate of $2.13 per share",
+   "id": "0001868159-26-000050",
+   "ticker": "LINE",
+   "company": "Lineage, Inc.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/0001868159-26-000050-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/earningsreleaseex991-linea.htm"
+  },
+  {
+   "amount": 0.51,
+   "frequency": "quarterly",
+   "evidence": "Declared a quarterly dividend of $0.51 per share, a 4.1% increase over the second quarter of 2026",
+   "id": "0001767042-26-000076",
+   "ticker": "KGS",
+   "company": "Kodiak Gas Services, Inc.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1767042/000176704226000076/0001767042-26-000076-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1767042/000176704226000076/kgsq32026earningsrelease.htm"
+  },
+  {
+   "amount": 0.46,
+   "frequency": "quarterly",
+   "evidence": "The Company announced today that its Board of Directors declared a quarterly cash dividend of $0.46 per share which will be paid on January 6, 2027, to shareholders of record as of December 3, 2026",
+   "id": "0000012659-26-000035",
+   "ticker": "HRB",
+   "company": "H&R BLOCK INC",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/12659/000001265926000035/0000012659-26-000035-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/12659/000001265926000035/q1fy27earningrelease.htm"
+  },
+  {
+   "amount": 0.89,
+   "frequency": "quarterly",
+   "evidence": "Declared quarterly dividend of $0.89",
+   "id": "0002011641-26-000042",
+   "ticker": "FERG",
+   "company": "Ferguson Enterprises Inc. /DE/",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/2011641/000201164126000042/0002011641-26-000042-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/2011641/000201164126000042/exhibit991pressreleasesept.htm"
+  },
+  {
+   "amount": 0.01,
+   "frequency": "quarterly",
+   "evidence": "The press release announced that the Company\u2019s Board of Directors authorized and declared a quarterly dividend of $0.01 per share of common stock, payable December 3, 2026 to stockholders of record as of the close of business on November 19, 2026",
+   "id": "0001628280-26-071872",
+   "ticker": "AMG",
+   "company": "AFFILIATED MANAGERS GROUP, INC.",
+   "date": "2026-11-09",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1004434/000162828026071872/0001628280-26-071872-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1004434/000162828026071872/amg-20261109.htm"
+  },
   {
    "amount": 0.46,
    "frequency": "quarterly",
