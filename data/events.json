@@ -1,11 +1,27 @@
 {
- "generated_at": "2026-11-10T02:20:33+00:00",
+ "generated_at": "2026-11-11T02:16:57+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
-  "end": "2026-11-10"
+  "end": "2026-11-11"
  },
  "events": [
+  {
+   "id": "0001031203-26-000157",
+   "ticker": "GPI",
+   "company": "GROUP 1 AUTOMOTIVE INC",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1031203/000103120326000157/0001031203-26-000157-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1031203/000103120326000157/exhibit991-111026.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": 2.0,
+   "new_amount": 2.2,
+   "pct_change": 10.0,
+   "frequency": "annual",
+   "confidence": "high",
+   "evidence": "The dividend is consistent with the Company\u2019s previously announced increase of 10% in its annualized dividend rate from $2.00 per share in 2025 to $2.20 per share in 2026"
+  },
   {
    "id": "0000883237-26-000064",
    "ticker": "VRTS",
@@ -7730,6 +7746,105 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.38,
+   "frequency": "quarterly",
+   "evidence": "Also, on November 9, 2026, the Board declared a quarterly cash dividend of $0.38 per share of common stock, an increase of $0.02 per share over the previous quarter, to be paid on December 15, 2026 to shareholders of record at the close of business on December 1, 2026.",
+   "id": "0001193125-26-454539",
+   "ticker": "VABK",
+   "company": "Virginia National Bankshares Corp",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1572334/000119312526454539/0001193125-26-454539-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1572334/000119312526454539/vabk-ex99_1.htm"
+  },
+  {
+   "amount": 0.115,
+   "frequency": "monthly",
+   "evidence": "(Nasdaq: PECO) (\u201cPECO\u201d or the \u201cCompany\u201d), one of the nation\u2019s largest owners and operators of high-quality, grocery-anchored neighborhood shopping centers, today announced that the Company\u2019s Board of Directors declared monthly dividend distributions of $0.115 per share of the Company\u2019s common stock payable on January 5, 2027;",
+   "id": "0001476204-26-000056",
+   "ticker": "PECO",
+   "company": "Phillips Edison & Company, Inc.",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1476204/000147620426000056/0001476204-26-000056-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1476204/000147620426000056/december2026-february2027d.htm"
+  },
+  {
+   "amount": 0.72,
+   "frequency": "semi-annual",
+   "evidence": "MILWAUKEE, WI (November 10, 2026) \u2013 The Board of Directors of ManpowerGroup (NYSE: MAN) has declared a semi-annual dividend of $0.72 per share, payable on December 15, 2026 to shareholders of record as of the close of business on December 1, 2026",
+   "id": "0000871763-26-000002",
+   "ticker": "MAN",
+   "company": "ManpowerGroup Inc.",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/871763/000087176326000002/0000871763-26-000002-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/871763/000087176326000002/man-ex99_1.htm"
+  },
+  {
+   "amount": 0.55,
+   "frequency": "quarterly",
+   "evidence": "(NYSE: GPI) (\u201cGroup 1\u201d or the \u201cCompany\u201d), a Fortune 250 automotive retailer with 255 dealerships located in the U.S. and U.K., today announced its board of directors declared a quarterly dividend of $0.55 per share.",
+   "id": "0001031203-26-000157",
+   "ticker": "GPI",
+   "company": "GROUP 1 AUTOMOTIVE INC",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1031203/000103120326000157/0001031203-26-000157-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1031203/000103120326000157/exhibit991-111026.htm"
+  },
+  {
+   "amount": 0.12,
+   "frequency": null,
+   "evidence": "Evolution Petroleum Reports Fiscal First Quarter 2027 Results and Declares $0.12 per Share Cash Dividend for the Fiscal Second Quarter",
+   "id": "0001104659-26-125263",
+   "ticker": "EPM",
+   "company": "EVOLUTION PETROLEUM CORP",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1006655/000110465926125263/0001104659-26-125263-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1006655/000110465926125263/epm-ex99d1.htm"
+  },
+  {
+   "amount": 0.19,
+   "frequency": "quarterly",
+   "evidence": "The Board of Directors of CNB Financial Corporation (Nasdaq: CCNE) declared a quarterly cash dividend of $0.19 per share of common stock payable on December 15, 2026 to common stock shareholders of record as of December 1, 2026",
+   "id": "0000736772-26-000102",
+   "ticker": "CCNE",
+   "company": "CNB FINANCIAL CORP/PA",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/736772/000073677226000102/0000736772-26-000102-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/736772/000073677226000102/ccne11-10x2699x1xcommondiv.htm"
+  },
+  {
+   "amount": 1.09,
+   "frequency": "quarterly",
+   "evidence": "Broadridge Declares Quarterly Dividend of $1.09 Per Share",
+   "id": "0001383312-26-000035",
+   "ticker": "BR",
+   "company": "BROADRIDGE FINANCIAL SOLUTIONS, INC.",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1383312/000138331226000035/0001383312-26-000035-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1383312/000138331226000035/ex991prredividend11-2026.htm"
+  },
+  {
+   "amount": 0.27,
+   "frequency": null,
+   "evidence": "(the \u201cCompany\u201d) (Nasdaq: AUBN) declared a fourth quarter $0.27 per share cash dividend, payable December 28, 2026 to shareholders of record as of December 10, 2026",
+   "id": "0001437749-26-036206",
+   "ticker": "AUBN",
+   "company": "AUBURN NATIONAL BANCORPORATION, INC",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/750574/000143774926036206/0001437749-26-036206-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/750574/000143774926036206/ex_1041936.htm"
+  },
+  {
+   "amount": 0.1,
+   "frequency": "quarterly",
+   "evidence": "(NASDAQ: AAON), doing business as The Aaon Group, a leader in high-performing, energy-efficient HVAC solutions that bring long-term value to customers and owners, today announced that its Board of Directors has declared the Company\u2019s next regular quarterly cash dividend of $0.10 per share (or $0.40 annually), payable on December 17, 2026, to stockholders of record as of the close of business on No",
+   "id": "0000824142-26-000090",
+   "ticker": "AAON",
+   "company": "AAON, INC.",
+   "date": "2026-11-10",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/824142/000082414226000090/0000824142-26-000090-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/824142/000082414226000090/pressreleasereq42026cashdi.htm"
+  },
   {
    "amount": 0.2,
    "frequency": "quarterly",
