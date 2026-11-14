@@ -1,14 +1,12 @@
 {
   "name": "Stock Rover",
   "headline": "Research dividend stocks free for 14 days",
-  "body": "Stock Rover has dividend history, screeners, and portfolio tools.",
-  "button": "Start the free trial",
-  "features_label": "See Stock Rover features",
+  "body": "Screen dividend growth, payout ratios and yields with Stock Rover.",
+  "button": "Start free trial",
   "disclosure": "Affiliate link: we may earn a commission if you sign up, at no cost to you.",
   "sa_author": "klicbaitinc",
-  "utm_source": "dividendboard",
+  "utm_source": "site",
   "links": {
-    "signup": "https://www.stockrover.com/plans/free/register/?sa_author=klicbaitinc",
-    "features": "https://www.stockrover.com/klicbaitinc"
+    "signup": "https://www.stockrover.com/plans/free/register/"
   }
 }

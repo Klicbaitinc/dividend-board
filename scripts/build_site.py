@@ -8,6 +8,7 @@ Env (blank values fall back to the GitHub project-site defaults):
              Set to "/" to publish at the domain root.
 """
 import datetime as dt, json, os, re, shutil
+from html import escape
 from collections import defaultdict
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
@@ -35,9 +36,9 @@ OFFER_PATH = ROOT / "config" / "offer.json"
 
 def load_offer():
     offer = json.loads(OFFER_PATH.read_text())
-    missing = [k for k in ("name", "headline", "body", "button", "features_label", "disclosure", "sa_author", "utm_source", "links") if k not in offer]
-    if missing or "signup" not in offer.get("links", {}) or "features" not in offer.get("links", {}):
-        raise SystemExit(f"config/offer.json is missing fields: {', '.join(missing) or 'links.signup/features'}")
+    missing = [k for k in ("name", "headline", "body", "button", "disclosure", "sa_author", "utm_source", "links") if k not in offer]
+    if missing or "signup" not in offer.get("links", {}):
+        raise SystemExit(f"config/offer.json is missing fields: {', '.join(missing) or 'links.signup'}")
     return offer
 
 def offer_href(url, placement, offer):
@@ -105,6 +106,38 @@ def write(path, html):
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(html)
 
+SPONSOR_BASE = "https://www.stockrover.com/plans/free/register/?sa_author=klicbaitinc&utm_source=site&utm_content="
+SPONSOR_FORBIDDEN = ("buy", "sell", "grade", "rating", "outperform", "underperform")
+
+def assert_sponsor(rel_path, utm_content, offer):
+    """The homepage and every stock page get one Stock Rover box, with that page's tracking."""
+    html = (OUT / rel_path).read_text()
+    expected = SPONSOR_BASE + utm_content
+    href = offer_href(offer["links"]["signup"], utm_content, offer)
+    aside = re.search(r'<aside class="card offer"[\s\S]*?</aside>', html)
+    problems = []
+    if html.count('class="card offer"') != 1 or not aside:
+        problems.append(f"expected 1 sponsor box, found {html.count('class=\"card offer\"')}")
+    if href != expected or escape(expected, quote=True) not in html or html.count("stockrover.com") != 1:
+        problems.append(f"expected exactly one link {expected}, builder produced {href}")
+    if 'rel="sponsored nofollow noopener"' not in html or 'target="_blank"' not in html:
+        problems.append("sponsor link missing rel or target")
+    for bit in (offer["headline"], offer["body"], offer["button"], offer["disclosure"]):
+        if bit not in html:
+            problems.append("missing copy: " + bit)
+    if aside and not re.search(
+        r'class="offer-actions"><a class="btn" href="[^"]+" rel="sponsored nofollow noopener" target="_blank">[^<]+</a></p>\s*<p class="offer-disclosure">',
+        aside.group(0),
+    ):
+        problems.append("disclosure is not directly under the button")
+    if aside:
+        text = re.sub(r"<[^>]+>", " ", aside.group(0))
+        for word in SPONSOR_FORBIDDEN:
+            if re.search(rf"\b{word}\b", text, re.I):
+                problems.append("disallowed language: " + word)
+    if problems:
+        raise SystemExit(f"{rel_path}: " + "; ".join(problems))
+
 def main():
     data = json.loads((ROOT / "data" / "events.json").read_text())
     events = data["events"]
@@ -156,6 +189,8 @@ def main():
         canonical="/", this_week=dict(key=this_week, start=mon, end=sun, events=tw["events"] if tw else []),
         recent=recent, total=len(events), n_tickers=len(tickers),
         totals={t: sum(1 for e in events if e["type"] == t) for t in LABEL}))
+    assert_sponsor("index.html", "home", offer)
+    sponsor_pages = 1
     pages.append(("/", today))
 
     # archive
@@ -184,6 +219,8 @@ def main():
             description=(f"{t['company']} ({tk}) dividend changes from SEC filings: latest was a {latest['label'].lower()} "
                          f"on {nice_date(latest['date'])}." ),
             canonical=f"/stock/{tk}/", tk=tk, company=t["company"], events=es, decls=ds, cuts=cuts, latest=latest))
+        assert_sponsor(f"stock/{tk}/index.html", f"stock_{tk}", offer)
+        sponsor_pages += 1
         pages.append((f"/stock/{tk}/", dt.date.fromisoformat(latest["date"])))
     write("stocks/index.html", env.get_template("stocks.html").render(
         **common, page_title=f"All stocks with dividend changes | {SITE_NAME}",
@@ -217,6 +254,7 @@ def main():
     verify_name = "googled3f97a2fd3c33754.html"
     shutil.copyfile(ROOT / verify_name, OUT / verify_name)
     print(f"Built {len(pages)} pages, {len(tickers)} stock pages, {len(week_list)} weeks -> {OUT}")
+    print(f"Sponsor box on {sponsor_pages} pages (1 homepage + {sponsor_pages - 1} stock pages)")
 
 if __name__ == "__main__":
     main()
