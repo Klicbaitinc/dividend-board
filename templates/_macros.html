@@ -47,11 +47,9 @@
 
 {% macro offer_slot(offer, placement) %}
 <aside class="card offer" aria-label="Affiliate offer: {{ offer.name }}">
-  <p class="offer-kicker">Affiliate · {{ offer.name }}</p>
-  <p class="offer-title">{{ offer.headline }}</p>
+  <h2 class="offer-title">{{ offer.headline }}</h2>
   <p>{{ offer.body }}</p>
-  <p class="offer-actions"><a class="btn" href="{{ offer_href(offer.links.signup, placement) }}" rel="sponsored noopener" target="_blank">{{ offer.button }}</a></p>
-  <p><a href="{{ offer_href(offer.links.features, placement) }}" rel="sponsored noopener" target="_blank">{{ offer.features_label }}</a></p>
+  <p class="offer-actions"><a class="btn" href="{{ offer_href(offer.links.signup, placement) }}" rel="sponsored nofollow noopener" target="_blank">{{ offer.button }}</a></p>
   <p class="offer-disclosure">{{ offer.disclosure }}</p>
 </aside>
 {% endmacro %}
