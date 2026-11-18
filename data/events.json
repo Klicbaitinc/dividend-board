@@ -1,11 +1,45 @@
 {
- "generated_at": "2026-11-17T02:28:22+00:00",
+ "generated_at": "2026-11-18T02:26:29+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
-  "end": "2026-11-17"
+  "end": "2026-11-18"
  },
  "events": [
+  {
+   "id": "0000057131-26-000042",
+   "ticker": "LZB",
+   "company": "LA-Z-BOY INC",
+   "date": "2026-11-17",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/57131/000005713126000042/0000057131-26-000042-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/57131/000005713126000042/fy27q2pressrelease.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": 0.242,
+   "new_amount": 0.27,
+   "pct_change": 11.57,
+   "frequency": "quarterly",
+   "confidence": "medium",
+   "evidence": "On November 17, 2026, the Board of Directors declared a quarterly cash dividend of $0.27 per share on the common stock of the company, a 12% increase over the previous dividend.",
+   "previous_filing_url": "https://www.sec.gov/Archives/edgar/data/57131/000005713126000034/0000057131-26-000034-index.htm",
+   "amount_note": "old amount from previous declaration filed 2026-08-18"
+  },
+  {
+   "id": "0001628280-26-074359",
+   "ticker": "GFF",
+   "company": "GRIFFON CORP",
+   "date": "2026-11-17",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/50725/000162828026074359/0001628280-26-074359-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/50725/000162828026074359/gffearningsreleaseq42026ex.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": null,
+   "new_amount": 0.25,
+   "pct_change": 14.0,
+   "frequency": "quarterly",
+   "confidence": "medium",
+   "evidence": "Reinforcing this strategy, earlier today we announced a $400 million increase in our share repurchase authorization, and a 14% increase in our regular quarterly dividend to $0.25 per share."
+  },
   {
    "id": "0000076605-26-000113",
    "ticker": "PATK",
@@ -7894,6 +7928,17 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.27,
+   "frequency": "quarterly",
+   "evidence": "On November 17, 2026, the Board of Directors declared a quarterly cash dividend of $0.27 per share on the common stock of the company, a 12% increase over the previous dividend.",
+   "id": "0000057131-26-000042",
+   "ticker": "LZB",
+   "company": "LA-Z-BOY INC",
+   "date": "2026-11-17",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/57131/000005713126000042/0000057131-26-000042-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/57131/000005713126000042/fy27q2pressrelease.htm"
+  },
   {
    "amount": 5.85,
    "frequency": "quarterly",
