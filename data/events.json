@@ -1,11 +1,29 @@
 {
- "generated_at": "2026-11-19T02:25:43+00:00",
+ "generated_at": "2026-11-19T17:21:57+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
   "end": "2026-11-19"
  },
  "events": [
+  {
+   "id": "0000063296-26-000116",
+   "ticker": "MATW",
+   "company": "MATTHEWS INTERNATIONAL CORP",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/63296/000006329626000116/0000063296-26-000116-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/63296/000006329626000116/ex991_4q2026dividendpr.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": 0.255,
+   "new_amount": 0.26,
+   "pct_change": 1.96,
+   "frequency": "quarterly",
+   "confidence": "medium",
+   "evidence": "PITTSBURGH, PA, NOVEMBER 18, 2026 - Matthews International Corporation (NASDAQ GSM: MATW) announced that its Board of Directors declared, at its regularly scheduled meeting today, a dividend of $0.26 per share on the Company\u2019s common stock, representing an increase to the Company\u2019s quarterly dividend rate",
+   "previous_filing_url": "https://www.sec.gov/Archives/edgar/data/63296/000006329626000069/0000063296-26-000069-index.htm",
+   "amount_note": "old amount from previous declaration filed 2026-07-30"
+  },
   {
    "id": "0001193125-26-467245",
    "ticker": "WSBC",
@@ -7944,6 +7962,17 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.26,
+   "frequency": "quarterly",
+   "evidence": "PITTSBURGH, PA, NOVEMBER 18, 2026 - Matthews International Corporation (NASDAQ GSM: MATW) announced that its Board of Directors declared, at its regularly scheduled meeting today, a dividend of $0.26 per share on the Company\u2019s common stock, representing an increase to the Company\u2019s quarterly dividend rate",
+   "id": "0000063296-26-000116",
+   "ticker": "MATW",
+   "company": "MATTHEWS INTERNATIONAL CORP",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/63296/000006329626000116/0000063296-26-000116-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/63296/000006329626000116/ex991_4q2026dividendpr.htm"
+  },
   {
    "amount": 0.4,
    "frequency": "quarterly",
