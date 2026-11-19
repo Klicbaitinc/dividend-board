@@ -1,11 +1,27 @@
 {
- "generated_at": "2026-11-18T02:26:29+00:00",
+ "generated_at": "2026-11-19T02:25:43+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
-  "end": "2026-11-18"
+  "end": "2026-11-19"
  },
  "events": [
+  {
+   "id": "0001193125-26-467245",
+   "ticker": "WSBC",
+   "company": "WESBANCO INC",
+   "date": "2026-11-18",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/203596/000119312526467245/0001193125-26-467245-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/203596/000119312526467245/wsbc-ex99_1.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": 0.38,
+   "new_amount": 0.39,
+   "pct_change": 2.63,
+   "frequency": "quarterly",
+   "confidence": "high",
+   "evidence": "(Nasdaq: WSBC), a diversified, multi-state bank holding company, announced today that its Board of Directors has approved a 2.6% increase in the quarterly cash dividend to $0.39 per common share from the previous quarterly dividend of $0.38 per common share."
+  },
   {
    "id": "0000057131-26-000042",
    "ticker": "LZB",
@@ -7928,6 +7944,94 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.4,
+   "frequency": "quarterly",
+   "evidence": "The Board of Directors of TrustCo Bank Corp NY (TrustCo, Nasdaq: TRST) on November 17, 2026 declared a quarterly cash dividend of $0.40 per share, or $1.60 per share on",
+   "id": "0001140361-26-044724",
+   "ticker": "TRST",
+   "company": "TRUSTCO BANK CORP N Y",
+   "date": "2026-11-18",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126044724/0001140361-26-044724-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126044724/ef20085941_ex99-1.htm"
+  },
+  {
+   "amount": 0.02,
+   "frequency": "quarterly",
+   "evidence": "Our Board declared a quarterly cash dividend of $0.02 per common share, equivalent to $0.08 annually at the current quarterly rate for Shareholders on record on September 30, 2026.",
+   "id": "0001437749-26-037543",
+   "ticker": "TRAK",
+   "company": "ReposiTrak, Inc.",
+   "date": "2026-11-18",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/50471/000143774926037543/0001437749-26-037543-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/50471/000143774926037543/ex_1048115.htm"
+  },
+  {
+   "amount": 0.17,
+   "frequency": "quarterly",
+   "evidence": "(NASDAQ: MVBF) (\u201cMVB\u201d or the \u201cCompany\u201d) today announced that its Board of Directors has declared a quarterly cash dividend of $0.17 per share, consistent with the previous quarter\u2019s dividend.",
+   "id": "0001277902-26-000103",
+   "ticker": "MVBF",
+   "company": "MVB FINANCIAL CORP",
+   "date": "2026-11-18",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1277902/000127790226000103/0001277902-26-000103-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1277902/000127790226000103/q42026cashdividendpressrel.htm"
+  },
+  {
+   "amount": 0.125,
+   "frequency": "quarterly",
+   "evidence": "MENOMONEE FALLS, Wis. \u2014 (BUSINESS WIRE) \u2014 November 18, 2026 \u2014The Board of Directors of Kohl\u2019s Corporation (NYSE: KSS) (\u201cKohl\u2019s\u201d or the \u201cCompany\u201d) today declared a regular quarterly dividend of $0.125 per share on the Company\u2019s common stock.",
+   "id": "0001193125-26-467271",
+   "ticker": "KSS",
+   "company": "KOHLS Corp",
+   "date": "2026-11-18",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/885639/000119312526467271/0001193125-26-467271-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/885639/000119312526467271/kss-ex99_1.htm"
+  },
+  {
+   "amount": 0.2708333,
+   "frequency": "monthly",
+   "evidence": "(the \u201c Board \u201d) has declared a monthly cash dividend of $0.2708333 per share of the Company\u2019s outstanding 13.00%",
+   "id": "0001214659-26-014553",
+   "ticker": "GPUS",
+   "company": "Hyperscale Data, Inc.",
+   "date": "2026-11-18",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/896493/000121465926014553/0001214659-26-014553-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/896493/000121465926014553/ex99_1.htm"
+  },
+  {
+   "amount": 0.47,
+   "frequency": null,
+   "evidence": "MILLERSBURG, OH \u2013 November 18, 2026 - CSB Bancorp, Inc., (OTCID: CSBB) announced that the Company\u2019s Board of Directors has declared a fourth quarter cash dividend of $0.47 per share on its common stock, payable December 15, 2026, to shareholders of record as of December 1, 2026.",
+   "id": "0001193125-26-467070",
+   "ticker": "CSBB",
+   "company": "CSB Bancorp, Inc.",
+   "date": "2026-11-18",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/880417/000119312526467070/0001193125-26-467070-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/880417/000119312526467070/csbb-ex99_1.htm"
+  },
+  {
+   "amount": 0.03,
+   "frequency": "monthly",
+   "evidence": "Declared a monthly dividend of $0.03 cents through February 2027, equating to a 21.18% annualized dividend based",
+   "id": "0001517767-26-000045",
+   "ticker": "CCID",
+   "company": "Carlyle Credit Income Fund",
+   "date": "2026-11-18",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1517767/000151776726000045/0001517767-26-000045-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1517767/000151776726000045/ccif_4q26xxex991earningspr.htm"
+  },
+  {
+   "amount": 0.06369,
+   "frequency": "quarterly",
+   "evidence": "declared, subject to the consummation of the Merger, the Stub Period Dividend of $0.06369 per share of Company Common Stock, which is equal to $0.00193 per share of Company Common Stock (which reflects the most recent regular quarterly dividend",
+   "id": "0001140361-26-044617",
+   "ticker": "AES",
+   "company": "AES CORP",
+   "date": "2026-11-18",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126044617/0001140361-26-044617-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126044617/ny20085743x2_8k.htm"
+  },
   {
    "amount": 0.27,
    "frequency": "quarterly",
