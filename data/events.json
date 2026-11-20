@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T05:46:13+00:00",
+ "generated_at": "2026-11-20T14:24:24+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
@@ -7978,6 +7978,28 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.03,
+   "frequency": "quarterly",
+   "evidence": "(the \u201cCompany\u201d) issued a press release announcing that the Company\u2019s board of directors declared a quarterly dividend of $0.03 per share, payable on December 18, 2026, to shareholders of record on December 4, 2026",
+   "id": "0001193125-26-469399",
+   "ticker": "FLO",
+   "company": "FLOWERS FOODS INC",
+   "date": "2026-11-20",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1128928/000119312526469399/0001193125-26-469399-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1128928/000119312526469399/d168459d8k.htm"
+  },
+  {
+   "amount": 0.19,
+   "frequency": "quarterly",
+   "evidence": "today announced that its Board of Directors declared a quarterly cash dividend of $0.19 per share of common stock.",
+   "id": "0001193125-26-469349",
+   "ticker": "DIN",
+   "company": "Dine Brands Global, Inc.",
+   "date": "2026-11-20",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/49754/000119312526469349/0001193125-26-469349-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/49754/000119312526469349/d116446dex991.htm"
+  },
   {
    "amount": 0.3175,
    "frequency": "quarterly",
