@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-19T20:25:28+00:00",
+ "generated_at": "2026-11-20T02:27:17+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
-  "end": "2026-11-19"
+  "end": "2026-11-20"
  },
  "events": [
   {
@@ -23,6 +23,22 @@
    "evidence": "PITTSBURGH, PA, NOVEMBER 18, 2026 - Matthews International Corporation (NASDAQ GSM: MATW) announced that its Board of Directors declared, at its regularly scheduled meeting today, a dividend of $0.26 per share on the Company\u2019s common stock, representing an increase to the Company\u2019s quarterly dividend rate",
    "previous_filing_url": "https://www.sec.gov/Archives/edgar/data/63296/000006329626000069/0000063296-26-000069-index.htm",
    "amount_note": "old amount from previous declaration filed 2026-07-30"
+  },
+  {
+   "id": "0000842517-26-000243",
+   "ticker": "ISBA",
+   "company": "ISABELLA BANK CORP",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000243/0000842517-26-000243-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000243/isba_2026q4xdivannxex991.htm",
+   "form": "8-K",
+   "type": "raise",
+   "old_amount": null,
+   "new_amount": 0.29,
+   "pct_change": 3.6,
+   "frequency": null,
+   "confidence": "medium",
+   "evidence": "Pleasant, Michigan, November 19, 2026 - Isabella Bank Corporation (Nasdaq: ISBA) today announced its Board of Directors declared a fourth-quarter cash dividend of $0.29 per common share, representing a 3.6% increase to the most recent dividend declaration."
   },
   {
    "id": "0001193125-26-467245",
@@ -7963,6 +7979,50 @@
  ],
  "declarations": [
   {
+   "amount": 0.3175,
+   "frequency": "quarterly",
+   "evidence": "(Cleveland - November 19, 2026) - TFS Financial Corporation (NASDAQ: TFSL) (the \u201cCompany\u201d), the holding company for Third Federal Savings and Loan Association of Cleveland (the \u201cAssociation\u201d), today announced that the Board of Directors declared a quarterly cash dividend of $0.3175 per share, payable on December 16, 2026, to stockholders of record on December 2, 2026",
+   "id": "0001381668-26-000047",
+   "ticker": "TFSL",
+   "company": "TFS Financial CORP",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1381668/000138166826000047/0001381668-26-000047-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1381668/000138166826000047/dividend11192026.htm"
+  },
+  {
+   "amount": 0.25,
+   "frequency": "quarterly",
+   "evidence": "(the \u201cCompany\u201d) declared a quarterly cash dividend of $0.25 per share on the Company\u2019s common stock.",
+   "id": "0001071236-26-000073",
+   "ticker": "RRBI",
+   "company": "RED RIVER BANCSHARES INC",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1071236/000107123626000073/0001071236-26-000073-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1071236/000107123626000073/rrbi-20261119.htm"
+  },
+  {
+   "amount": 0.445,
+   "frequency": "quarterly",
+   "evidence": "In addition, the Company's Board of Directors declared a regular quarterly cash dividend of $0.445 per common share, payable on December 31, 2026 to stockholders of record as of December 8, 2026",
+   "id": "0000745732-26-000047",
+   "ticker": "ROST",
+   "company": "ROSS STORES, INC.",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/745732/000074573226000047/0000745732-26-000047-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/745732/000074573226000047/q326exhibit991.htm"
+  },
+  {
+   "amount": 0.15,
+   "frequency": "quarterly",
+   "evidence": "Today, the Company announced the declaration of a quarterly cash dividend of $0.15 per common share.",
+   "id": "0001437749-26-037715",
+   "ticker": "NGVC",
+   "company": "Natural Grocers by Vitamin Cottage, Inc.",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1547459/000143774926037715/0001437749-26-037715-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1547459/000143774926037715/ex_1047600.htm"
+  },
+  {
    "amount": 0.26,
    "frequency": "quarterly",
    "evidence": "PITTSBURGH, PA, NOVEMBER 18, 2026 - Matthews International Corporation (NASDAQ GSM: MATW) announced that its Board of Directors declared, at its regularly scheduled meeting today, a dividend of $0.26 per share on the Company\u2019s common stock, representing an increase to the Company\u2019s quarterly dividend rate",
@@ -7972,6 +8032,61 @@
    "date": "2026-11-19",
    "filing_url": "https://www.sec.gov/Archives/edgar/data/63296/000006329626000116/0000063296-26-000116-index.htm",
    "document_url": "https://www.sec.gov/Archives/edgar/data/63296/000006329626000116/ex991_4q2026dividendpr.htm"
+  },
+  {
+   "amount": 0.29,
+   "frequency": null,
+   "evidence": "Pleasant, Michigan, November 19, 2026 - Isabella Bank Corporation (Nasdaq: ISBA) today announced its Board of Directors declared a fourth-quarter cash dividend of $0.29 per common share, representing a 3.6% increase to the most recent dividend declaration.",
+   "id": "0000842517-26-000243",
+   "ticker": "ISBA",
+   "company": "ISABELLA BANK CORP",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000243/0000842517-26-000243-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/842517/000084251726000243/isba_2026q4xdivannxex991.htm"
+  },
+  {
+   "amount": 0.06,
+   "frequency": "quarterly",
+   "evidence": "(Nasdaq: HQI), a national franchisor of on-demand staffing and executive search services, today announced that its Board of Directors has declared a quarterly dividend of $0.06 per share.",
+   "id": "0001437749-26-037725",
+   "ticker": "HQI",
+   "company": "HireQuest, Inc.",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1140102/000143774926037725/0001437749-26-037725-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1140102/000143774926037725/ex_1048822.htm"
+  },
+  {
+   "amount": 0.25,
+   "frequency": "quarterly",
+   "evidence": "(NYSE:CRI) today declared a quarterly dividend of $0.25 per share, payable on December 18, 2026, to shareholders of record at the close of business on December 3, 2026",
+   "id": "0001060822-26-000129",
+   "ticker": "CRI",
+   "company": "CARTERS INC",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1060822/000106082226000129/0001060822-26-000129-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1060822/000106082226000129/cri-ex9912026q4dividendpre.htm"
+  },
+  {
+   "amount": 0.3,
+   "frequency": "quarterly",
+   "evidence": "WALNUT CREEK, California, November 19, 2026 \u2013 BayCom Corp ( NASDAQ: BCML ) (\u201cBayCom\u201d or the \u201cCompany\u201d), the parent company of United Business Bank, today announced that its Board of Directors declared a quarterly cash dividend of $0.30 per share on the Company's common stock.",
+   "id": "0001730984-26-000089",
+   "ticker": "BCML",
+   "company": "BayCom Corp",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1730984/000173098426000089/0001730984-26-000089-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1730984/000173098426000089/bcml-ex99d1.htm"
+  },
+  {
+   "amount": 0.52,
+   "frequency": null,
+   "evidence": "On November 19, 2026, BancFirst Corporation\u2019s Board of Directors declared a $0.52 per share cash dividend on its common stock.",
+   "id": "0001193125-26-468432",
+   "ticker": "BANF",
+   "company": "BANCFIRST CORP /OK/",
+   "date": "2026-11-19",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/760498/000119312526468432/0001193125-26-468432-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/760498/000119312526468432/banf-20261119.htm"
   },
   {
    "amount": 0.4,
