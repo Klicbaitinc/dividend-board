@@ -1,11 +1,27 @@
 {
- "generated_at": "2026-11-23T14:22:05+00:00",
+ "generated_at": "2026-11-24T00:24:19+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
-  "end": "2026-11-23"
+  "end": "2026-11-24"
  },
  "events": [
+  {
+   "id": "0001585521-26-000170",
+   "ticker": "ZM",
+   "company": "Zoom Communications, Inc.",
+   "date": "2026-11-23",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/0001585521-26-000170-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/zm-20261031ex991.htm",
+   "form": "8-K",
+   "type": "initiation",
+   "old_amount": null,
+   "new_amount": 0.25,
+   "pct_change": null,
+   "frequency": "quarterly",
+   "confidence": "medium",
+   "evidence": "In November 2026, Zoom\u2019s Board of Directors approved the initiation of a quarterly cash dividend program and declared a cash dividend of $0.25 per share on Zoom\u2019s outstanding common stock, payable on December 17, 2026, to stockholders of record as of the close of business on December 3, 2026"
+  },
   {
    "id": "0001193125-26-471010",
    "ticker": "MNRO",
@@ -7994,6 +8010,17 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.25,
+   "frequency": "quarterly",
+   "evidence": "In November 2026, Zoom\u2019s Board of Directors approved the initiation of a quarterly cash dividend program and declared a cash dividend of $0.25 per share on Zoom\u2019s outstanding common stock, payable on December 17, 2026, to stockholders of record as of the close of business on December 3, 2026",
+   "id": "0001585521-26-000170",
+   "ticker": "ZM",
+   "company": "Zoom Communications, Inc.",
+   "date": "2026-11-23",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/0001585521-26-000170-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/zm-20261031ex991.htm"
+  },
   {
    "amount": 0.2,
    "frequency": "quarterly",
