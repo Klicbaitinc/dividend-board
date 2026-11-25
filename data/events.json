@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-24T00:24:19+00:00",
+ "generated_at": "2026-11-25T14:24:44+00:00",
  "source": "SEC EDGAR full-text search (8-K filings)",
  "window": {
   "start": "2025-10-25",
-  "end": "2026-11-24"
+  "end": "2026-11-25"
  },
  "events": [
   {
@@ -8010,6 +8010,94 @@
   }
  ],
  "declarations": [
+  {
+   "amount": 0.2372,
+   "frequency": "quarterly",
+   "evidence": "York, Pennsylvania, November 24, 2026: The York Water Company's (NASDAQ: YORW) President and CEO, JT Hand, announced today that the Board of Directors at their November 23 rd meeting declared a quarterly dividend of $0.2372 per share, a 4% increase.",
+   "id": "0001140361-26-045468",
+   "ticker": "YORW",
+   "company": "YORK WATER CO",
+   "date": "2026-11-24",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/108985/000114036126045468/0001140361-26-045468-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/108985/000114036126045468/ef20086497_8k.htm"
+  },
+  {
+   "amount": 0.4,
+   "frequency": "quarterly",
+   "evidence": "~ Board Declares Quarterly Dividend of $0.40",
+   "id": "0000950142-26-003145",
+   "ticker": "MOV",
+   "company": "MOVADO GROUP INC",
+   "date": "2026-11-24",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/72573/000095014226003145/0000950142-26-003145-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/72573/000095014226003145/eh260858771_ex9901.htm"
+  },
+  {
+   "amount": 0.125,
+   "frequency": "quarterly",
+   "evidence": "As previously announced, on November 18, 2026, the Board of Directors of the Company declared a quarterly cash dividend of $0.125 per share.",
+   "id": "0001193125-26-473133",
+   "ticker": "KSS",
+   "company": "KOHLS Corp",
+   "date": "2026-11-24",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/885639/000119312526473133/0001193125-26-473133-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/885639/000119312526473133/d168523d8k.htm"
+  },
+  {
+   "amount": 0.31,
+   "frequency": "quarterly",
+   "evidence": "The HP board of directors has declared a quarterly cash dividend of $0.31 per share on the Company\u2019s common",
+   "id": "0000047217-26-000054",
+   "ticker": "HPQ",
+   "company": "HP INC",
+   "date": "2026-11-24",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000054/0000047217-26-000054-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/47217/000004721726000054/hp103126exhibit991q426.htm"
+  },
+  {
+   "amount": 0.1,
+   "frequency": "quarterly",
+   "evidence": "(NASDAQ: GIII) today announced that its Board of Directors has declared a quarterly cash dividend of $0.10 per share.",
+   "id": "0001104659-26-131350",
+   "ticker": "GIII",
+   "company": "G III APPAREL GROUP LTD /DE/",
+   "date": "2026-11-24",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/821002/000110465926131350/0001104659-26-131350-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/821002/000110465926131350/giii-ex99d1.htm"
+  },
+  {
+   "amount": 0.01,
+   "frequency": "quarterly",
+   "evidence": "The Company\u2019s Board of Directors declared a quarterly cash dividend of $0.01 for each issued and outstanding share of the Company\u2019s common stock.",
+   "id": "0001872789-26-000037",
+   "ticker": "EMBC",
+   "company": "Embecta Corp.",
+   "date": "2026-11-24",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1872789/000187278926000037/0001872789-26-000037-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1872789/000187278926000037/q42026ex-991.htm"
+  },
+  {
+   "amount": 1.25,
+   "frequency": "quarterly",
+   "evidence": "(7) The Company declared and paid quarterly dividends of $1.25 per share in fiscal 2026 and $1.2125 per share in fiscal 2025",
+   "id": "0001089063-26-000039",
+   "ticker": "DKS",
+   "company": "DICK'S SPORTING GOODS, INC.",
+   "date": "2026-11-24",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/1089063/000108906326000039/0001089063-26-000039-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/1089063/000108906326000039/dks-20261031xex991earnings.htm"
+  },
+  {
+   "amount": 1.1,
+   "frequency": "quarterly",
+   "evidence": "The ADI Board of Directors has declared a quarterly cash dividend of $1.10 per outstanding share of common stock.",
+   "id": "0000006281-26-000087",
+   "ticker": "ADI",
+   "company": "ANALOG DEVICES INC",
+   "date": "2026-11-24",
+   "filing_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000087/0000006281-26-000087-index.htm",
+   "document_url": "https://www.sec.gov/Archives/edgar/data/6281/000000628126000087/adiq426exhibit991.htm"
+  },
   {
    "amount": 0.25,
    "frequency": "quarterly",
